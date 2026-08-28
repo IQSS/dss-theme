@@ -1,0 +1,39 @@
+---
+title: "DSS theme"
+---
+
+A Quarto extension carrying the look of IQSS Data Science Services: Questrial headings, Montserrat text, the IQSS blue and orange, the DSS wordmark in the navbar, the standard links, the footer. It exists so that the workshops site, the beginner's guides, and any future DSS page share one look from one place.
+
+## Install
+
+In a Quarto project:
+
+```sh
+quarto add IQSS/dss-theme
+```
+
+Then in `_quarto.yml`, for a website:
+
+```yaml
+project:
+  type: dss-theme
+```
+
+or, to take only the HTML format and keep your own navbar:
+
+```yaml
+format: dss-theme-html
+```
+
+Update later with `quarto update iqss/dss-theme`.
+
+## What it contributes
+
+- A website project type with the navbar (wordmark, Training materials, Data Science Services, Request help as the orange button) and the footer. Your `_quarto.yml` adds the sidebar or left-hand links; anything you set overrides the defaults.
+- An HTML format: the `cosmo` theme with `dss.scss` on top, a table of contents, copy buttons on code, simple callouts, external links in a new tab.
+
+See the [sample page](sample.qmd) for how headings, callouts, code, and tables come out.
+
+## Source of the tokens
+
+The colours and fonts are the training index's (`theme.scss` in `IQSS/dss-training`), which took them from the IQSS site. Change them there first, then here; bump `version` in `_extension.yml` so consumers can `quarto update`.

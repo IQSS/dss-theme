@@ -1,0 +1,9 @@
+# The extension's own demo site: two pages rendered with the theme, so a change to dss.scss can be seen.
+project:
+  type: dss-theme
+  render:
+    - index.qmd
+    - sample.qmd
+
+website:
+  title: "DSS theme"

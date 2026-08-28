@@ -1,0 +1,64 @@
+/*-- scss:defaults --*/
+// The IQSS site's own values, so every DSS page reads as a sibling of the Data Science Services landing
+// page: Questrial for headings, Montserrat for text, band blue #3C72B4, button orange #BF5803.
+// Source of the tokens: sites/dss-training/theme.scss (the training index). Change them there first.
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Montserrat:wght@400;500;600&display=swap");
+
+$font-family-sans-serif: Montserrat, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: Questrial, Montserrat, sans-serif;
+$headings-font-weight: 400;
+$font-size-base: 1rem;
+$body-color: #1e1e1e;
+$body-bg: #ffffff;
+$primary: #3c72b4;
+$link-color: #3c72b4;
+$navbar-bg: #ffffff;
+$navbar-fg: #1e1e1e;
+$navbar-hl: #3c72b4;
+$footer-bg: #ffffff;
+$footer-fg: #5c677a;
+$code-block-bg: #f5f5f5;
+$code-color: #234a75;
+$callout-color-note: #3c72b4;
+$callout-color-tip: #2f8a8a;
+$callout-color-warning: #bf5803;
+$callout-color-important: #bf5803;
+$callout-color-caution: #7a5c93;
+
+$dss-blue: #3c72b4;
+$dss-orange: #bf5803;
+$dss-light: #f5f5f5;
+$dss-muted: #5c677a;
+$dss-rule: #e3e6ea;
+
+/*-- scss:rules --*/
+body { line-height: 1.55; }
+h1 { font-size: 36px; line-height: 1.15; text-wrap: balance; }
+h2 { font-size: 26px; line-height: 1.25; border-bottom: 0; padding-bottom: 0; text-wrap: balance; }
+h3 { font-size: 20px; }
+h4 { font-size: 17px; font-family: Montserrat, sans-serif; font-weight: 500; }
+.eyebrow { font: 600 11.5px Montserrat, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: $dss-muted; margin-bottom: 6px; }
+
+// Navbar: the wordmark at a readable size, the last link as the orange button.
+.navbar { border-bottom: 1px solid $dss-rule; padding-top: 12px; padding-bottom: 12px; }
+.navbar .navbar-brand img.navbar-logo, .navbar img.navbar-logo { max-height: 60px !important; height: 60px; width: auto; }
+.navbar .navbar-nav .nav-link { font-weight: 500; font-size: 14px; color: $body-color; }
+.navbar .navbar-nav .nav-item:last-child .nav-link {
+  background: $dss-orange; color: #fff; border-radius: 3px; padding: 8px 14px; margin-left: 8px;
+  &:hover { background: darken($dss-orange, 6%); color: #fff; }
+}
+
+// Sidebar and page navigation.
+.sidebar-navigation .sidebar-item-container .sidebar-item-text, .sidebar-navigation .sidebar-section .sidebar-item-text { font-size: 14px; }
+.sidebar-navigation .sidebar-item-container .active .sidebar-item-text { color: $dss-blue; font-weight: 500; }
+.nav-page .nav-page-text { font-weight: 500; }
+
+// Callouts and code.
+.callout { border-radius: 4px; }
+.callout .callout-header, .callout .callout-title-container { font-weight: 500; }
+pre.sourceCode, div.sourceCode { border-radius: 4px; }
+code { font-size: 0.9em; }
+
+// Footer.
+.nav-footer { border-top: 1px solid $dss-rule; padding: 22px 0 36px; font-size: 12.5px; }
+.nav-footer a { color: $body-color; font-weight: 500; }

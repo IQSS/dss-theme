@@ -1,0 +1,68 @@
+---
+title: "Sample page"
+subtitle: "Every element the workshops use, rendered with the theme"
+---
+
+<span class="eyebrow">Topics</span>
+
+* Objects and assignment
+* Functions and help
+* Importing packages
+
+## A section heading
+
+Body text in Montserrat at 16 px. A sentence with a [link to the DSS site](https://www.iq.harvard.edu/data-science-services), some `inline code`, and a second sentence long enough to wrap so the line height can be judged. Another paragraph follows.
+
+Another paragraph, with a footnote-free claim and nothing else to it.
+
+### A subsection
+
+```r
+# read the data and look at the first rows
+library(tidyverse)
+baby_names <- read_csv("data/babyNames.csv")
+head(baby_names)
+```
+
+```python
+# the same in Python
+import pandas as pd
+baby_names = pd.read_csv("data/babyNames.csv")
+baby_names.head()
+```
+
+```stata
+* and in Stata
+import delimited data/babyNames.csv, clear
+list in 1/6
+```
+
+::: {.callout-note}
+Before the workshop, follow the installation instructions and check that RStudio starts.
+:::
+
+::: {.callout-tip collapse="true" title="Click for the Exercise 1 solution"}
+```r
+sqrt(10)
+# or
+10^(1/2)
+```
+:::
+
+::: {.callout-warning}
+The `cd` line in the do-file points at the author's desktop. Change it to your own folder.
+:::
+
+| Editor or IDE | Features  | Ease of use | Languages |
+|:--------------|:----------|:------------|:----------|
+| RStudio       | Excellent | Easy        | R, Python, Quarto |
+| Positron      | Excellent | Easy        | R, Python |
+| VS Code       | Excellent | Moderate    | Everything |
+
+: The IDE table from the R introduction {.striped}
+
+#### A fourth-level heading
+
+1. First step
+2. Second step
+3. Third step
