@@ -14,7 +14,7 @@ quarto add IQSS/dss-theme
 
 Then `project: type: dss-theme` in `_quarto.yml` for a website with the DSS
 navbar and footer, or `format: dss-theme-html` to take only the HTML format.
-Update with `quarto update iqss/dss-theme`.
+Update with `quarto update IQSS/dss-theme`.
 
 ## Develop
 

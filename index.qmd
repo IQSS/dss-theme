@@ -25,7 +25,7 @@ or, to take only the HTML format and keep your own navbar:
 format: dss-theme-html
 ```
 
-Update later with `quarto update iqss/dss-theme`.
+Update later with `quarto update IQSS/dss-theme`.
 
 ## What it contributes
 
