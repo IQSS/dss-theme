@@ -1,4 +1,5 @@
-# The extension's own demo site: two pages rendered with the theme, so a change to dss.scss can be seen.
+# The extension's own demo site: two pages rendered with the theme, with a docked sidebar like a workshops site,
+# so a change to dss.scss can be seen in the layout consumers will actually use.
 project:
   type: dss-theme
   render:
@@ -7,3 +8,9 @@ project:
 
 website:
   title: "DSS theme"
+  sidebar:
+    style: floating
+    search: true
+    contents:
+      - index.qmd
+      - sample.qmd

@@ -34,6 +34,14 @@ Update later with `quarto update IQSS/dss-theme`.
 
 See the [sample page](sample.qmd) for how headings, callouts, code, and tables come out.
 
+## Light and dark
+
+Both, from the same tokens: `dss-dark.scss` re-declares the colours on a blue-biased dark ground. The menu at the right of the navbar offers Light, Dark, and System; a choice is remembered by the browser, and System follows the operating system, live. The wordmark has a dark variant.
+
+## Widths
+
+The navbar, the footer, and the page grid (sidebar, body, margin) sit on the training index's column, a 1368-px box with 1312 px of content, so a DSS page lines up with the IQSS site whichever one you came from.
+
 ## Source of the tokens
 
 The colours and fonts are the training index's (`theme.scss` in `IQSS/dss-training`), which took them from the IQSS site. Change them there first, then here; bump `version` in `_extension.yml` so consumers can `quarto update`.
