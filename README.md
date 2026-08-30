@@ -29,6 +29,3 @@ off the navbar, on the cover page and in the tab.
 `quarto preview` at the repository root renders the two-page demo
 (`index.qmd`, `sample.qmd`) with the extension in `_extensions/dss-theme/`.
 Edit `dss.scss`, look, bump `version` in `_extension.yml`.
-
-Layout, working rules, and where the tokens come from: `AGENTS.md`. Open work:
-`TASKS.md`; where things stand: `STATUS.md`.
