@@ -19,6 +19,10 @@ Then `project: type: dss-theme` in `_quarto.yml` for a website with the DSS
 navbar and footer, or `format: dss-theme-html` to take only the HTML format.
 Update with `quarto update IQSS/dss-theme`.
 
+A site that sets `repo-url` also gets a **Report an issue** action at the foot
+of the right-hand table of contents, and one that sets `author` and `date` gets
+those under the page title in the DSS typography.
+
 For a Quarto book, `project: type: dss-theme-book` instead: the same navbar,
 footer, and favicon under `book:` (an extension contributes one project type,
 so books have their own; `quarto add` installs both). The book title stays
