@@ -109,5 +109,5 @@ footer.footer .nav-footer { align-items: center; }
 #title-block-header.quarto-title-block.default {
   .quarto-title-meta-heading { font: 600 11.5px Montserrat, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: $dss-muted; opacity: 1; margin-top: 0; }
   .quarto-title-meta-contents { font-size: 14px; color: $body-color; p { margin-bottom: 0; } }
-  .quarto-title-meta:has(.quarto-title-meta-heading) { padding-bottom: 16px; border-bottom: 1px solid $dss-rule; margin-bottom: 24px; }
+  .quarto-title-meta:has(.quarto-title-meta-heading) { margin-top: 20px; padding-bottom: 16px; border-bottom: 1px solid $dss-rule; margin-bottom: 24px; }
 }
