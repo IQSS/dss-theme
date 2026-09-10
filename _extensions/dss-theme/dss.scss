@@ -147,7 +147,11 @@ body.nav-fixed { padding-top: 112px; }
 // glyph is zero-width and the text around it re-flows when it lands: the chevrons in the left nav and
 // the issue link in the right one. The glyphs are drawn on a 1em square, so reserving 1em costs
 // nothing -- of 43 icons on a workshop page it changed exactly one, by a pixel.
-.bi { display: inline-block; width: 1em; text-align: center; }
+// content-box, because Bootstrap makes everything border-box: Quarto spaces the Report an issue icon
+// from its text with padding-right on the icon, and under border-box that padding sits inside the
+// reserved 1em, so the glyph overflowed it and sat on the first letter (0.6.7). With content-box the
+// 1em is the glyph and the padding is added outside it, before and after the font arrives alike.
+.bi { display: inline-block; width: 1em; box-sizing: content-box; text-align: center; }
 
 .navbar .dss-theme-switch .nav-link { margin-left: 6px; padding-left: 8px; padding-right: 8px; }
 .navbar .dss-theme-switch .dss-switch-icon { font-size: 15px; vertical-align: -1px; }
