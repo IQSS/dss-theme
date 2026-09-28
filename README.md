@@ -2,7 +2,7 @@
 
 A Quarto extension carrying the look of IQSS Data Science Services (Questrial
 headings, Montserrat text, the IQSS blue and orange, the DSS wordmark, the
-standard navbar links and footer with the IQSS logo, a Light / Dark / System
+standard navbar links and footer with the IQSS logo and the licenses (MIT for code, CC BY 4.0 for content), a Light / Dark / System
 switch, and callouts, images, figures, and code output that hold in both
 modes), so that the
 workshops site, the beginner's guides, and any future DSS page share one look

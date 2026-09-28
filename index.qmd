@@ -29,7 +29,7 @@ Update later with `quarto update IQSS/dss-theme`.
 
 ## What it contributes
 
-- A website project type with the navbar (wordmark, Training materials, Data Science Services, Request help as the orange button) and the footer. Your `_quarto.yml` adds the sidebar or left-hand links; anything you set overrides the defaults.
+- A website project type with the navbar (wordmark, Training materials, Data Science Services, Request help as the orange button) and the footer, which names the DSS licenses: MIT for code, CC BY 4.0 for content. Your `_quarto.yml` adds the sidebar or left-hand links; anything you set overrides the defaults.
 - An HTML format: the `cosmo` theme with `dss.scss` on top, a table of contents, copy buttons on code, simple callouts, external links in a new tab.
 
 See the [sample page](sample.qmd) for how headings, callouts, code, and tables come out.
