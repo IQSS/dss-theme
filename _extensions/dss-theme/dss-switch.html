@@ -7,19 +7,29 @@
   const KEY = "quarto-color-scheme";
   const mq = window.matchMedia("(prefers-color-scheme: dark)");
   const stored = () => { try { return window.localStorage.getItem(KEY); } catch { return null; } };
+  const remember = (value) => {
+    try {
+      if (value === null) window.localStorage.removeItem(KEY);
+      else window.localStorage.setItem(KEY, value);
+    } catch {}
+  };
   const mode = () => { const s = stored(); return s === "alternate" ? "dark" : s === "default" ? "light" : "system"; };
   const isDark = () => document.body.classList.contains("quarto-dark");
   const apply = (dark) => {
     if (isDark() === dark) return;
-    if (typeof window.quartoToggleColorScheme === "function") { window.quartoToggleColorScheme(); }
+    // Apply the selected appearance directly through Quarto's rendered helper.
+    // Its toggle instead inverts shared storage, which may describe another tab.
+    // Applying a theme must not write storage or tabs can trigger one another.
+    if (typeof toggleColorMode !== "function") return;
+    toggleColorMode(dark);
+    if (typeof refreshSafariScrollbar === "function") refreshSafariScrollbar();
+    if (typeof toggleGiscusIfUsed === "function") toggleGiscusIfUsed(dark, mq.matches);
+    window.dispatchEvent(new Event("resize"));
   };
   const choose = (m) => {
     const dark = m === "dark" ? true : m === "light" ? false : mq.matches;
+    remember(m === "system" ? null : dark ? "alternate" : "default");
     apply(dark);
-    try {
-      if (m === "system") { window.localStorage.removeItem(KEY); }
-      else { window.localStorage.setItem(KEY, dark ? "alternate" : "default"); }
-    } catch {}
     mark();
   };
   const items = [["light", "Light", "bi-sun"], ["dark", "Dark", "bi-moon"], ["system", "System", "bi-circle-half"]];
@@ -59,5 +69,13 @@
   if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", build); } else { build(); }
   // Quarto's listener re-applies the OS preference on change when nothing is stored; keep the tick in step.
   mq.addEventListener("change", () => setTimeout(mark, 0));
+  // Sites on the same origin share this preference. Read its current value,
+  // rather than an earlier queued event, to keep open pages and menus in step.
+  window.addEventListener("storage", (event) => {
+    if (event.key !== KEY && event.key !== null) return;
+    const m = mode();
+    apply(m === "system" ? mq.matches : m === "dark");
+    mark();
+  });
 })();
 </script>
